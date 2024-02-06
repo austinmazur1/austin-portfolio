@@ -23,22 +23,33 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center w-full h-screen">
-            <p>Hey there!</p>
-            {/* TODO on mount animation of a icon or something that appears from behind the developer text */}
-            <p>I'm Austin and I am a Full Stack Developer</p>
+          <div className="flex flex-col items-start pl-32 justify-center w-full h-3/4">
+            <div>
+              <h2 className="text-7xl">Austin Mazur</h2>
+              <h3 className="text-7xl">Creating digital solutions</h3>
+              <br />
+
+              {/* TODO on mount animation of a icon or something that appears from behind the developer text */}
+              <p className="text-2xl">
+                I'm a Full Stack Developer eager to craft digital solutions <br /> to
+                help make an impact
+              </p>
+            </div>
             {/* BMX rider */}
             {/* martial artist */}
             {/* Idea do a animation where it changes the text and with each text we have an avatar or image */}
           </div>
+          <div className="self-center">
+            <a href="#about">[Insert Icon]</a>
+          </div>
         </div>
 
-        <div className="w-full h-screen flex flex-col items-center pt-12 justify-center">
+        <div className="w-full h-screen flex flex-col items-center justify-center">
           <p id="about" className="">
             About me
           </p>
-          <div className="flex justify-evenly pt-24 items-center">
-            <div className="flex w-60 h-72 rounded-full border-8 overflow-hidden">
+          <div className="flex justify-center gap-12 pt-24 items-center">
+            <div className="flex w-60 h-72 rounded-md border-4 overflow-hidden">
               <Image
                 className="object-cover"
                 src={Photo}
@@ -48,23 +59,18 @@ export default function Home() {
                 priority
               />
             </div>
-            <p className="w-1/2">
-              I'm a full-stack developer with experience in React, ExpressJS,
-              NextJS, Tailwind, React Native and Firebase. I am a Long Island
-              New York native but after a few years traveling I eventually
-              settled down in Spain.
+            <p className="w-2/5">
+              I'm Austin and I'm full-stack developer. I am a Long Island,
+              New York native now living in Palma de Mallorca, Spain.
               <br />
               <br />
-              I have always been an avid learner, eager to soak up as much
-              knowledge as I can and get to experimenting and getting creative
+              I have always loved learning, eager to soak up as much
+              knowledge as I can and get to experimenting and being creative
               in any way I can. I remember the second I pieced together some
-              HTML and CSS and saw the results in my browser I was hooked!
+              HTML and CSS and saw the results in my browser, I was hooked!
               <br />
-              <br />I am a BMX rider, a martial artist, a coffee enthusiast, all
-              outlets to express myself. What I love about programming is it
-              scratches that same itch. The possibilities are endless and with a
-              bit of patience, hard work and eagerness to learn and grow the
-              necessary skills, there's no telling what we can build.
+              <br />What I love about programming are the endless possibilities. With a
+              bit of patience, dedication and a mug full of coffee, there's no telling what we can build.
             </p>
           </div>
         </div>
@@ -74,18 +80,14 @@ export default function Home() {
             Projects
           </p>
           <div className="flex w-full justify-center gap-4 h-screen pt-12 pb-12">
-            <div className="bg-blue-500 w-1/3 h-96">proj1</div>
-            <div className="bg-blue-800 w-1/3">Description</div>
-          </div>
-          <div className="flex w-full justify-center gap-4 h-screen mb-12">
-            <div className="bg-blue-500 w-1/3 h-96">proj1</div>
-            <div className="bg-blue-800 w-1/3">Description</div>
+            <div className="bg-blue-500 w-1/2 h-72">proj1</div>
+            <div className="bg-blue-800 w-1/4">Description</div>
           </div>
         </div>
 
         <div className="w-full h-screen flex flex-col items-center mt-12">
           <p id="contact" className="">
-            Contact
+            Contact Me
           </p>
         </div>
       </main>
