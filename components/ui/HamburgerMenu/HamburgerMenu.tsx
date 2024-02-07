@@ -9,7 +9,7 @@ const HamburgerMenu = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div>
+    <div className="flex justify-end mb-12">
     <button className={styles.hamburgerButton} onClick={toggleMenu}>
       <div className={styles.hamburgerIcon}>
         <span></span>
