@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Photo from "@/public/images/Austin_4.jpg";
 import styles from "@/app/test.module.css";
@@ -10,8 +10,10 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center p-10">
         <div className="lg:h-screen flex flex-col w-full">
           <div className="z-10 w-full items-center justify-end font-mono text-sm">
-            <HamburgerMenu />
-            <div className="hidden lg:gap-10 items-end lg:justify-center lg:h-fit lg:w-auto lg:bg-none h-fit justify-end  lg:flex">
+            <div className="lg:hidden">
+              <HamburgerMenu />
+            </div>
+            <div className="hidden lg:gap-10 items-end lg:h-fit lg:w-auto lg:bg-none h-fit justify-end lg:flex font-roboto font-semibold">
               <a href="#about" className="hover:text-slate-600">
                 About
               </a>
@@ -25,20 +27,17 @@ export default function Home() {
               </a>
             </div>
           </div>
-            
 
-          <div className="flex flex-col lg:items-start lg:pl-32 lg:justify-center w-full lg:h-3/5 md:items-center md:h-1/2 h-auto items-center text-center">
+          <div className="flex flex-col w-full lg:items-start lg:pl-32 lg:justify-center lg:h-5/6 lg:text-left md:items-center md:h-1/2 h-auto items-center text-center">
             <div>
-              <h2 className="lg:text-7xl md:text-4xl text-2xl">
-                Austin Mazur
-              </h2>
-              <h3 className="lg:text-7xl md:text-4xl text-2xl">
+              <h2 className="font-montserrat font-bold lg:text-7xl md:text-4xl text-2xl">Austin Mazur</h2>
+              <h3 className="font-montserrat font-light lg:text-7xl md:text-4xl text-2xl">
                 Creating digital solutions
               </h3>
               <br />
 
               {/* TODO on mount animation of a icon or something that appears from behind the developer text */}
-              <p className="lg:text-2xl md:text-xl text-xl">
+              <p className="font-roboto font-light lg:text-2xl md:text-xl text-xl">
                 I'm a Full Stack Developer eager to craft digital solutions{" "}
                 <br /> to help make an impact
               </p>
@@ -52,8 +51,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full lg:h-screen lg:mt-0 sm:h-fit mt-24 flex flex-col items-center justify-center">
-          <p id="about" className="lg:text-4xl md:text-2xl text-2xl">
+        <div className="w-full lg:h-screen lg:mt-0 sm:h-fit flex flex-col items-center justify-center">
+          <p id="about" className="font-montserrat lg:text-4xl md:text-2xl text-2xl">
             About me
           </p>
           <div className="flex lg:flex-row lg:justify-center gap-12 lg:pt-24 md:pt-12 pt-12 items-center flex-col">
@@ -68,7 +67,7 @@ export default function Home() {
               />
             </div>
             <p className="lg:w-2/5 w-full">
-              I'm Austin and I'm full-stack developer. I am a Long Island, New
+              I'm Austin and I'm <strong className="font-bold text-green-300">full-stack developer</strong>. I am a Long Island, New
               York native now living in Palma de Mallorca, Spain.
               <br />
               <br />
@@ -86,7 +85,7 @@ export default function Home() {
         </div>
 
         <div className="w-full h-fit flex flex-col items-center pt-12 ">
-          <p id="projects" className="lg:text-4xl md:text-2xl text-2xl">
+          <p id="projects" className="font-montserrat lg:text-4xl md:text-2xl text-2xl">
             Projects
           </p>
           <div className="flex w-full lg:flex-row justify-center items-center gap-4 pt-12 pb-12 flex-col">
@@ -134,7 +133,7 @@ export default function Home() {
         </div>
 
         <div className="w-full h-fit flex flex-col items-center mt-12">
-          <p id="contact" className="lg:text-4xl md:text-2xl text-2xl">
+          <p id="contact" className="font-montserrat lg:text-4xl md:text-2xl text-2xl">
             Get in touch
           </p>
           <div className="flex justify-evenly lg:w-1/2 w-full mt-12">

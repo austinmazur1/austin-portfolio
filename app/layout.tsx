@@ -1,8 +1,20 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Roboto,  Montserrat} from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+export const roboto = Roboto({
+    subsets: ['latin'],
+    weight: ['300', '400', '500'],
+    variable: '--font-roboto',
+})
+
+export const montserrat = Montserrat({
+    subsets: ['latin'],
+    weight: ['700', '500', '400'],
+    variable: '--font-montserrat',
+})
+
 
 export const metadata: Metadata = {
   title: "Austin Mazur",
@@ -16,7 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      {/* <body className={inter.className}>{children}</body> */}
+      <body className={`${roboto.variable} ${montserrat.variable}`}>{children}</body>
     </html>
   );
 }

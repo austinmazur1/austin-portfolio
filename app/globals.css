@@ -6,7 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  -webkit-text-fill-color: #bababa;
+  /* -webkit-text-fill-color: #bababa; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,3 +39,7 @@ body {
     @apply scroll-smooth
   }
 }
+p {
+  @apply font-roboto
+}
+
