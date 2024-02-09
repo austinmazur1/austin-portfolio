@@ -6,13 +6,16 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  /* -webkit-text-fill-color: #bababa; */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* --background-start-rgb: 1, 11, 51; */
+    --background-start-rgb: 18, 25, 51;
+    --background-end-rgb: 0, 6, 28;
+    /* --background-end-rgb: 0, 0, 0; */
   }
 }
 
@@ -31,3 +34,12 @@ body {
     text-wrap: balance;
   }
 }
+@layer base {
+  html {
+    @apply scroll-smooth
+  }
+}
+p {
+  @apply font-roboto
+}
+
