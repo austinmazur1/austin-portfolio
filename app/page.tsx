@@ -4,6 +4,9 @@ import Photo from "@/public/images/Austin_4.jpg";
 import styles from "@/app/test.module.css";
 import AuctionEra from "@/public/images/auction-era-screenshots/Screenshot 2024-02-06 at 11.07.01 AM.png";
 import HamburgerMenu from "@/components/ui/HamburgerMenu/HamburgerMenu";
+import { BiDownArrow } from "react-icons/bi";
+import { FaLinkedin, FaXTwitter, FaGithub } from "react-icons/fa6";
+import { MdOutlineEmail } from "react-icons/md";
 export default function Home() {
   return (
     <>
@@ -41,8 +44,9 @@ export default function Home() {
 
               {/* TODO on mount animation of a icon or something that appears from behind the developer text */}
               <p className="font-roboto font-light lg:text-xl md:text-xl text-xl lg:w-1/2">
-                I'm a Full Stack Developer passionate in delivering digital experiences that not
-                only function flawlessly but also make a real difference.
+                I'm a Full Stack Developer passionate in delivering digital
+                experiences that not only function flawlessly but also make a
+                real difference.
               </p>
             </div>
             {/* BMX rider */}
@@ -50,12 +54,13 @@ export default function Home() {
             {/* Idea do a animation where it changes the text and with each text we have an avatar or image */}
           </div>
           <div className="lg:self-center lg:block hidden">
-            <a href="#about">[Insert Icon]</a>
+            <a href="#about">
+              <BiDownArrow size={24} />
+            </a>
           </div>
         </div>
 
         <div className="w-full lg:h-fit mt-12  lg:mb-24 sm:h-fit flex flex-col items-center justify-center ">
-
           <p
             id="about"
             className="font-montserrat lg:text-4xl md:text-2xl text-2xl"
@@ -153,11 +158,19 @@ export default function Home() {
           >
             Get in touch
           </p>
-          <div className="flex justify-evenly lg:w-1/2 w-full mt-12">
-            <p>Email</p>
-            <p>Twitter</p>
-            <p>LinkedIn</p>
-            <p>Github</p>
+          <div className="flex justify-evenly items-center lg:w-1/2 w-full mt-12">
+            <a href="mailto:mazuraustin1@gmail.com">
+              <MdOutlineEmail size={24} />
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/AustinTMazur">
+              <FaXTwitter size={24} />
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/austin-mazur/">
+              <FaLinkedin size={24} />
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/austinmazur1">
+              <FaGithub size={24} />
+            </a>
           </div>
         </div>
       </main>
