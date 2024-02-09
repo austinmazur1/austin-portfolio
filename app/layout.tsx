@@ -3,13 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Roboto,  Montserrat} from "next/font/google";
 
-export const roboto = Roboto({
+const roboto = Roboto({
     subsets: ['latin'],
     weight: ['300', '400', '500'],
     variable: '--font-roboto',
 })
 
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
     subsets: ['latin'],
     weight: ['700', '500', '400'],
     variable: '--font-montserrat',
