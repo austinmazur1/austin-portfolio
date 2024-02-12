@@ -100,6 +100,43 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="w-full h-fit flex flex-col items-center pt-12">
+          <p
+            id="projects"
+            className="font-montserrat lg:text-4xl md:text-2xl text-2xl"
+          >
+            Experience
+          </p>
+          <div className="flex w-full justify-center items-center flex-col py-12 lg:w-2/5">
+            <div className="flex gap-7 lg:flex-col lg:items-left lg:w-full lg:gap-1">
+              <p className="text-slate-500">2023 - Present</p>
+              <p className="font-bold">Full Stack Developer</p>
+              <a
+                href="https://www.cometalabs.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-500 hover:text-slate-600"
+              >
+                Cometa Labs
+              </a>
+            </div>
+            <p className="text-center py-4 lg:text-left">
+              Develop, iterate and maintain websites and mobile applications for
+              startups, medium sized businesses and everything in-between.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <p className="bg-slate-700 px-4 py-1 rounded-full">Typescript</p>
+              <p className="bg-slate-700 px-4 py-1 rounded-full">React</p>
+              <p className="bg-slate-700 px-4 py-1 rounded-full">
+                React Native
+              </p>
+              <p className="bg-slate-700 px-4 py-1 rounded-full">Next.js</p>
+              <p className="bg-slate-700 px-4 py-1 rounded-full">Node.js</p>
+              <p className="bg-slate-700 px-4 py-1 rounded-full">Firebase</p>
+            </div>
+          </div>
+        </div>
+
         <div className="w-full h-fit flex flex-col items-center pt-12 ">
           <p
             id="projects"
@@ -107,7 +144,7 @@ export default function Home() {
           >
             Projects
           </p>
-          <div className="flex w-full lg:flex-row justify-center items-center gap-4 pt-12 pb-12 flex-col">
+          <div className="flex w-full lg:flex-row justify-center items-center gap-4 py-12 flex-col">
             <div className="lg:w-1/2 w-full">
               <Image
                 style={{ borderRadius: 6 }}
@@ -162,13 +199,25 @@ export default function Home() {
             <a href="mailto:mazuraustin1@gmail.com">
               <MdOutlineEmail size={24} />
             </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/AustinTMazur">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/AustinTMazur"
+            >
               <FaXTwitter size={24} />
             </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/austin-mazur/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/austin-mazur/"
+            >
               <FaLinkedin size={24} />
             </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/austinmazur1">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/austinmazur1"
+            >
               <FaGithub size={24} />
             </a>
           </div>
