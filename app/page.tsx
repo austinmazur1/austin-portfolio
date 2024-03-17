@@ -8,9 +8,33 @@ import { BiDownArrow } from "react-icons/bi";
 import { FaLinkedin, FaXTwitter, FaGithub } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 
 export default function Home() {
   const router = useRouter();
+
+ useGSAP(() => {
+  gsap.to('.hero-text', {
+    ease: 'power1.inOut',
+    opacity: 1,
+    delay: .5
+  }
+  )
+
+gsap.to('.tag-line', {
+  ease: 'power1.inOut',
+  opacity: 1,
+  delay: .6
+})
+
+  gsap.to('.p-text', {
+    ease: 'power1.inOut',
+    opacity:1,
+    delay: .7
+  })
+ },[])
   return (
     <>
       <main className="flex min-h-screen flex-col items-center p-10">
@@ -33,17 +57,17 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col w-full lg:items-start lg:pl-32 lg:justify-center lg:h-5/6 lg:text-left md:items-center md:h-1/2 h-auto items-center text-center">
-            <div>
-              <h2 className="font-montserrat font-bold lg:text-7xl md:text-4xl text-2xl">
+            <div className="">
+              <h2 className="font-montserrat font-bold lg:text-7xl md:text-4xl text-2xl opacity-0 hero-text">
                 Austin Mazur
               </h2>
-              <h3 className="font-montserrat font-light lg:text-5xl md:text-4xl text-2xl">
+              <h3 className="font-montserrat font-light lg:text-5xl md:text-4xl text-2xl opacity-0 tag-line">
                 Crafting Next-Gen Web & Mobile Solutions
               </h3>
               <br />
 
               {/* TODO on mount animation of a icon or something that appears from behind the developer text */}
-              <p className="font-roboto font-light lg:text-xl md:text-xl text-xl lg:w-1/2">
+              <p className="font-roboto font-light lg:text-xl md:text-xl text-xl lg:w-1/2 opacity-0 p-text">
                 I'm a Full Stack Developer passionate in delivering digital
                 experiences that not only function flawlessly but also make a
                 real difference.
