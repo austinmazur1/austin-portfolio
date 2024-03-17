@@ -8,8 +8,9 @@ import { BiDownArrow } from "react-icons/bi";
 import { FaLinkedin, FaXTwitter, FaGithub } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
 import { useRouter } from "next/navigation";
+
 export default function Home() {
-  const router = useRouter() 
+  const router = useRouter();
   return (
     <>
       <main className="flex min-h-screen flex-col items-center p-10">
@@ -144,9 +145,12 @@ export default function Home() {
           >
             Projects
           </p>
-          <div className="flex w-full lg:flex-row justify-center items-center gap-4 py-12 flex-col hover:cursor-pointer" onClick={() => {
-            router.push('/project-details/auction-era')
-          }}>
+          <div
+            className="flex w-full lg:flex-row justify-center items-center gap-4 py-12 flex-col hover:cursor-pointer"
+            onClick={() => {
+              router.push("/project-details/auction-era");
+            }}
+          >
             <div className="lg:w-1/2 w-full">
               <Image
                 style={{ borderRadius: 6 }}
