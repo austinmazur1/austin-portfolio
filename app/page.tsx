@@ -7,7 +7,9 @@ import HamburgerMenu from "@/components/ui/HamburgerMenu/HamburgerMenu";
 import { BiDownArrow } from "react-icons/bi";
 import { FaLinkedin, FaXTwitter, FaGithub } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
+import { useRouter } from "next/navigation";
 export default function Home() {
+  const router = useRouter() 
   return (
     <>
       <main className="flex min-h-screen flex-col items-center p-10">
@@ -20,11 +22,9 @@ export default function Home() {
               <a href="#about" className="hover:text-slate-600">
                 About
               </a>
-              {/* <div className={styles.test} /> */}
               <a href="#projects" className="hover:text-slate-600">
                 Projects
               </a>
-              {/* <div className={styles.test2} /> */}
               <a href="#contact" className="hover:text-slate-600">
                 Contact
               </a>
@@ -37,7 +37,6 @@ export default function Home() {
                 Austin Mazur
               </h2>
               <h3 className="font-montserrat font-light lg:text-5xl md:text-4xl text-2xl">
-                {/* Building Digital Experiences Across Web and Mobile */}
                 Crafting Next-Gen Web & Mobile Solutions
               </h3>
               <br />
@@ -133,6 +132,7 @@ export default function Home() {
               <p className="bg-slate-700 px-4 py-1 rounded-full">Next.js</p>
               <p className="bg-slate-700 px-4 py-1 rounded-full">Node.js</p>
               <p className="bg-slate-700 px-4 py-1 rounded-full">Firebase</p>
+              <p className="bg-slate-700 px-4 py-1 rounded-full">Figma</p>
             </div>
           </div>
         </div>
@@ -144,7 +144,9 @@ export default function Home() {
           >
             Projects
           </p>
-          <div className="flex w-full lg:flex-row justify-center items-center gap-4 py-12 flex-col">
+          <div className="flex w-full lg:flex-row justify-center items-center gap-4 py-12 flex-col hover:cursor-pointer" onClick={() => {
+            router.push('/project-details/auction-era')
+          }}>
             <div className="lg:w-1/2 w-full">
               <Image
                 style={{ borderRadius: 6 }}
