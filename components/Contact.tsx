@@ -2,9 +2,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin, Mail, X as XIcon } from "lucide-react";
+import { Github, Linkedin, X as XIcon } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -17,12 +18,10 @@ export default function Contact() {
     };
 
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
-        setSubmitStatus({ type: null, message: '' });
 
         try {
             const response = await fetch("/api/send-email", {
@@ -39,16 +38,10 @@ export default function Contact() {
                 throw new Error(data.error || 'Failed to send message');
             }
 
-            setSubmitStatus({ 
-                type: 'success', 
-                message: 'Message sent successfully! I\'ll get back to you soon.' 
-            });
             setFormData({ name: "", email: "", message: "" });
+            toast.success('Message sent successfully! I will get back to you soon.');
         } catch (error) {
-            setSubmitStatus({ 
-                type: 'error', 
-                message: error instanceof Error ? error.message : 'Failed to send message. Please try again.' 
-            });
+            toast.error(error instanceof Error ? error.message : 'Failed to send message. Please try again.');
         } finally {
             setIsSubmitting(false);
         }
@@ -81,12 +74,6 @@ export default function Contact() {
                 <span className="sr-only">Twitter</span>
               </Link>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="mailto:mazuraustin1@gmail.com">
-                <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
-              </Link>
-            </Button>
           </div>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -101,11 +88,6 @@ export default function Contact() {
           <div className="space-y-2">
             <Textarea placeholder="Message" className="min-h-[150px]" name="message" value={formData.message} onChange={handleChange} />
           </div>
-          {submitStatus.type && (
-            <div className={`p-4 rounded-md ${submitStatus.type === 'success' ? 'bg-green-50 text-green-800 border border-green-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
-              {submitStatus.message}
-            </div>
-          )}
           <Button type="submit" className="w-full sm:w-auto" disabled={isSubmitting}>
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </Button>
